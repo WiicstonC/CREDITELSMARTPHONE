@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Creditel Smartphone - Catálogo Oficial</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <!-- NAV BAR LIMPIA -->
+    <!-- NAV BAR UNIFICADA -->
     <header class="navbar">
         <div class="nav-container">
             <img src="assets/logo.png" alt="Creditel Smartphone" class="logo">
@@ -47,12 +47,13 @@
     <!-- BARRA DE FILTROS POR MARCA -->
     <div class="filter-bar-container">
         <div class="filter-buttons">
-            <button class="filter-btn active" onclick="filterCategory('all')">Todos</button>
-            <button class="filter-btn" onclick="filterCategory('honor')">Honor</button>
-            <button class="filter-btn" onclick="filterCategory('tablets')">Tablets</button>
-            <button class="filter-btn" onclick="filterCategory('xiaomi')">Xiaomi</button>
-            <button class="filter-btn" onclick="filterCategory('samsung')">Samsung / Knox</button>
-            <button class="filter-btn" onclick="filterCategory('accesorios')">Accesorios</button>
+            <button class="filter-btn active" onclick="filterCategory('all', event)">Todos</button>
+            <button class="filter-btn" onclick="filterCategory('honor', event)">Honor</button>
+            <button class="filter-btn" onclick="filterCategory('tablets', event)">Tablets</button>
+            <button class="filter-btn" onclick="filterCategory('xiaomi', event)">Xiaomi</button>
+            <button class="filter-btn" onclick="filterCategory('samsung', event)">Samsung / Knox</button>
+            <button class="filter-btn" onclick="filterCategory('apple', event)">Apple</button>
+            <button class="filter-btn" onclick="filterCategory('accesorios', event)">Accesorios</button>
         </div>
     </div>
 
@@ -77,7 +78,6 @@
                         <img src="assets/honor-magic8.jpg" alt="Honor Magic 8 Lite">
                         <h3>HONOR MAGIC 8 LITE</h3>
                         <ul>
-                            <li><strong>Procesador:</strong> 50MP</li>
                             <li><strong>Cámara:</strong> 50MP</li>
                             <li><strong>Pantalla:</strong> 6.6" FHD+</li>
                         </ul>
@@ -86,7 +86,7 @@
                 </div>
             </div>
 
-            <!-- BANNER PROMO HONOR -->
+            <!-- BANNER PROMO HONOR (NUEVA IMAGEN 1) -->
             <div class="card-box honor-promo catalog-item" data-category="honor">
                 <img src="assets/honor-promo.jpg" alt="Honor Innovación">
                 <div class="promo-overlay">
@@ -102,28 +102,28 @@
                         <img src="assets/lenovo-tab.jpg" alt="Lenovo Tab Idea">
                         <div class="item-info">
                             <h4>Lenovo Tab Idea</h4>
-                            <small>512GB/56B • 50MP</small>
+                            <small>512GB • 50MP</small>
                         </div>
                     </div>
                     <div class="tablet-item">
                         <img src="assets/redmi-pad.jpg" alt="Redmi Pad 2">
                         <div class="item-info">
                             <h4>Redmi Pad 2</h4>
-                            <small>Cámara 20MP • SIM</small>
+                            <small>Cámara 20MP</small>
                         </div>
                     </div>
                     <div class="tablet-item">
                         <img src="assets/samsung-a57.jpg" alt="Samsung A57">
                         <div class="item-info">
                             <h4>SAMSUNG A57</h4>
-                            <small>256GB/5GB • 5000mAh</small>
+                            <small>256GB • 5000mAh</small>
                         </div>
                     </div>
                     <div class="tablet-item">
                         <img src="assets/samsung-a17.jpg" alt="Samsung A17">
                         <div class="item-info">
                             <h4>SAMSUNG A17</h4>
-                            <small>128GB/4GB • Doble Sim</small>
+                            <small>128GB • Doble Sim</small>
                         </div>
                     </div>
                 </div>
@@ -135,9 +135,9 @@
                 <div class="xiaomi-main">
                     <img src="assets/xiaomi-note15.jpg" alt="Xiaomi Note 15 Pro Plus">
                     <div class="xiaomi-details">
-                        <h3>XIAOMI NOTE 15 PRO+</h3>
+                        <h3>NOTE 15 PRO+</h3>
                         <ul>
-                            <li>512GB/72GB | 5000mAh</li>
+                            <li>512GB | 5000mAh</li>
                             <li>Cámara Ultra 50MP</li>
                         </ul>
                     </div>
@@ -158,37 +158,37 @@
                 </div>
             </div>
 
-            <!-- ACCESORIOS Y SEGURIDAD SIDEBAR -->
+            <!-- ACCESORIOS Y SEGURIDAD SIDEBAR (NUEVA IMAGEN 2) -->
             <div class="card-side-column catalog-item" data-category="accesorios">
                 <div class="card-box side-card">
-                    <h2>ACCESORIOS XIAOMI</h2>
-                    <img src="assets/accesorios-kit.jpg" alt="Accesorio Xiaomi">
+                    <h2>ACCESORIOS</h2>
+                    <img src="assets/accesorios-kit.jpg" alt="Accesorios Kit">
                 </div>
-                <div class="card-box side-card dark-bg" data-category="samsung">
-                    <h2>SEGURIDAD SAMSUNG KNOX</h2>
+                <div class="card-box side-card dark-bg catalog-item" data-category="samsung">
+                    <h2>SAMSUNG KNOX</h2>
                     <div class="knox-content">
                         <img src="assets/samsung-knox.jpg" alt="Samsung Knox">
-                        <p>Protección avanzada constante.</p>
+                        <p>Protección avanzada.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- BANNER INTERMEDIO DE ACCESORIOS -->
-        <section class="banner-horizontal" data-category="accesorios">
+        <section class="banner-horizontal catalog-item" data-category="accesorios">
             <div class="banner-overlay-content">
                 <div class="text-group">
                     <h3>DESCUBRE NUESTRA NUEVA LÍNEA DE ACCESORIOS</h3>
                     <p>VISÍTANOS EN NUESTRO LOCAL</p>
                 </div>
-                <a href="https://wa.me/message/BCL2QA4FMFRHP1" target="_blank" class="btn-location"><i class="fa-solid fa-location-dot"></i> UBÍCANOS Y VISÍTANOS</a>
+                <a href="https://wa.me/message/BCL2QA4FMFRHP1" target="_blank" class="btn-location"><i class="fa-solid fa-location-dot"></i> UBÍCANOS</a>
                 <a href="https://wa.me/message/BCL2QA4FMFRHP1" target="_blank" class="btn-shop">SHOP NOW</a>
             </div>
         </section>
 
-        <!-- FICHAS TÉCNICAS ( MÁS VENDIDOS ) -->
+        <!-- FICHAS TÉCNICAS -->
         <section class="section-fichas">
-            <h2 class="title-fichas">FICHAS TÉCNICAS - CELULARES MÁS VENDIDOS EN COLOMBIA</h2>
+            <h2 class="title-fichas">FICHAS TÉCNICAS - MÁS VENDIDOS</h2>
             <div class="fichas-grid">
                 
                 <div class="ficha-card catalog-item" data-category="samsung">
@@ -198,8 +198,6 @@
                         <ul>
                             <li><strong>Procesador:</strong> Exynos 1480</li>
                             <li><strong>Cámara:</strong> Triple 50MP</li>
-                            <li><strong>Batería:</strong> 5000mAh</li>
-                            <li><strong>Pantalla:</strong> Super AMOLED</li>
                         </ul>
                         <button class="btn-detail" onclick="openWhatsApp('Samsung Galaxy A55 5G')">Consultar</button>
                     </div>
@@ -210,10 +208,8 @@
                     <div class="ficha-info">
                         <h3>Xiaomi Redmi Note 13 Pro</h3>
                         <ul>
-                            <li><strong>Procesador:</strong> Snapdragon 7s Gen 2</li>
+                            <li><strong>Procesador:</strong> Snapdragon 7s</li>
                             <li><strong>Cámara:</strong> 200MP</li>
-                            <li><strong>Batería:</strong> 5100mAh</li>
-                            <li><strong>Pantalla:</strong> AMOLED</li>
                         </ul>
                         <button class="btn-detail" onclick="openWhatsApp('Xiaomi Redmi Note 13 Pro')">Consultar</button>
                     </div>
@@ -226,8 +222,6 @@
                         <ul>
                             <li><strong>Procesador:</strong> A15 Bionic</li>
                             <li><strong>Cámara:</strong> Dual 12MP</li>
-                            <li><strong>Batería:</strong> ~3279mAh</li>
-                            <li><strong>Pantalla:</strong> Super Retina XDR</li>
                         </ul>
                         <button class="btn-detail" onclick="openWhatsApp('iPhone 14')">Consultar</button>
                     </div>
@@ -240,8 +234,6 @@
                         <ul>
                             <li><strong>Procesador:</strong> Dimensity 7020</li>
                             <li><strong>Cámara:</strong> 50MP</li>
-                            <li><strong>Batería:</strong> 5000mAh</li>
-                            <li><strong>Pantalla:</strong> FHD+</li>
                         </ul>
                         <button class="btn-detail" onclick="openWhatsApp('Motorola Moto G54 5G')">Consultar</button>
                     </div>
@@ -259,10 +251,11 @@
 
     <!-- BOTÓN WHATSAPP FLOTANTE -->
     <a href="https://wa.me/message/BCL2QA4FMFRHP1" class="whatsapp-btn" target="_blank">
-        <span>¿Dudas? Chat con nosotros</span>
+        <span>¿Dudas? Chat</span>
         <div class="wp-icon"><i class="fa-brands fa-whatsapp"></i></div>
     </a>
 
     <script src="script.js"></script>
 </body>
 </html>
+
