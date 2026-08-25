@@ -9,6 +9,23 @@
 </head>
 <body>
 
+    <!-- VENTANA EMERGENTE (POPUP PROMOCIÓN) -->
+    <div id="promoModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closePromoModal()">&times;</button>
+            <div class="modal-body">
+                <img src="assets/promo-modal.jpg" alt="Promoción iPhone 17 Pro Max">
+                <div class="modal-text">
+                    <h3>¡GRAN LANZAMIENTO!</h3>
+                    <p>iPhone 17 Pro Max 256GB con financiamiento disponible.</p>
+                    <a href="https://wa.me/message/BCL2QA4FMFRHP1" target="_blank" class="btn-modal-wa">
+                        <i class="fa-brands fa-whatsapp"></i> ¡Pedir por WhatsApp!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- NAV BAR -->
     <header class="navbar">
         <div class="nav-container">
@@ -48,7 +65,7 @@
                             <li><strong>Batería:</strong> 5100mAh</li>
                             <li><strong>Pantalla:</strong> 6.6" FHD+</li>
                         </ul>
-                        <button class="btn-detail" onclick="openModal('HONOR X7D')">Ver Detalles</button>
+                        <button class="btn-detail" onclick="openWhatsApp('HONOR X7D')">Ver Detalles</button>
                     </div>
                     <div class="product-mini">
                         <img src="assets/honor-magic8.jpg" alt="Honor Magic 8 Lite">
@@ -58,7 +75,7 @@
                             <li><strong>Cámara:</strong> 50MP</li>
                             <li><strong>Pantalla:</strong> 6.6" FHD+</li>
                         </ul>
-                        <button class="btn-detail" onclick="openModal('HONOR MAGIC 8 LITE')">Ver Detalles</button>
+                        <button class="btn-detail" onclick="openWhatsApp('HONOR MAGIC 8 LITE')">Ver Detalles</button>
                     </div>
                 </div>
             </div>
@@ -79,31 +96,28 @@
                         <img src="assets/lenovo-tab.jpg" alt="Lenovo Tab Idea">
                         <div class="item-info">
                             <h4>Lenovo Tab Idea</h4>
-                            <p>(512GB/56B)</p>
-                            <small>Procesador 50MP | Batería 5000mAh | WiFi</small>
+                            <small>512GB/56B • 50MP</small>
                         </div>
                     </div>
                     <div class="tablet-item">
                         <img src="assets/redmi-pad.jpg" alt="Redmi Pad 2">
                         <div class="item-info">
                             <h4>Redmi Pad 2</h4>
-                            <small>Procesador 1128 | Cámara 20MP | Batería 5000mAh | SIM Cabo</small>
+                            <small>Cámara 20MP • SIM</small>
                         </div>
                     </div>
                     <div class="tablet-item">
                         <img src="assets/samsung-a57.jpg" alt="Samsung A57">
                         <div class="item-info">
                             <h4>SAMSUNG A57</h4>
-                            <p>(256GB/5GB)</p>
-                            <small>Procesador A50 | Cámara 26MP | Batería 5000mAh | WiFi</small>
+                            <small>256GB/5GB • 5000mAh</small>
                         </div>
                     </div>
                     <div class="tablet-item">
                         <img src="assets/samsung-a17.jpg" alt="Samsung A17">
                         <div class="item-info">
                             <h4>SAMSUNG A17</h4>
-                            <p>(128GB/4GB)</p>
-                            <small>Procesador 36MP | Cámara 604 | Batería 5000mAh | Doble Sim</small>
+                            <small>128GB/4GB • Doble Sim</small>
                         </div>
                     </div>
                 </div>
@@ -115,29 +129,25 @@
                 <div class="xiaomi-main">
                     <img src="assets/xiaomi-note15.jpg" alt="Xiaomi Note 15 Pro Plus">
                     <div class="xiaomi-details">
-                        <h3>XIAOMI NOTE 15 PRO PLUS</h3>
-                        <p>(512GB/72GB)</p>
+                        <h3>XIAOMI NOTE 15 PRO+</h3>
                         <ul>
-                            <li>Procesador: 850</li>
-                            <li>Cámara: 50MP</li>
-                            <li>Batería: 5000mAh</li>
-                            <li>Cámara Ultra: 50MP</li>
-                            <li>Pantalla: 6.6" Negro</li>
+                            <li>512GB/72GB | 5000mAh</li>
+                            <li>Cámara Ultra 50MP</li>
                         </ul>
                     </div>
                 </div>
                 <div class="xiaomi-sub-grid">
                     <div class="sub-item">
                         <img src="assets/xiaomi-band.jpg" alt="Xiaomi Smart Band">
-                        <span>XIAOMI SMART BAND 10</span>
+                        <span>BAND 10</span>
                     </div>
                     <div class="sub-item">
                         <img src="assets/redmi-watch.jpg" alt="Redmi Watch S Lite">
-                        <span>REDMI WATCH S LITE</span>
+                        <span>WATCH S</span>
                     </div>
                     <div class="sub-item">
                         <img src="assets/xiaomi-robot.jpg" alt="Xiaomi Robot Vacuum">
-                        <span>XIAOMI ROBOT VACUUM S40C</span>
+                        <span>ROBOT S40C</span>
                     </div>
                 </div>
             </div>
@@ -152,7 +162,7 @@
                     <h2>SEGURIDAD SAMSUNG KNOX</h2>
                     <div class="knox-content">
                         <img src="assets/samsung-knox.jpg" alt="Samsung Knox">
-                        <p>Seguridad Avanzada con protección constante en tu dispositivo.</p>
+                        <p>Protección avanzada constante.</p>
                     </div>
                 </div>
             </div>
@@ -165,8 +175,8 @@
                     <h3>DESCUBRE NUESTRA NUEVA LÍNEA DE ACCESORIOS</h3>
                     <p>VISÍTANOS EN NUESTRO LOCAL</p>
                 </div>
-                <button class="btn-location"><i class="fa-solid fa-location-dot"></i> UBÍCANOS Y VISÍTANOS</button>
-                <button class="btn-shop">SHOP NOW</button>
+                <a href="https://wa.me/message/BCL2QA4FMFRHP1" target="_blank" class="btn-location"><i class="fa-solid fa-location-dot"></i> UBÍCANOS Y VISÍTANOS</a>
+                <a href="https://wa.me/message/BCL2QA4FMFRHP1" target="_blank" class="btn-shop">SHOP NOW</a>
             </div>
         </section>
 
@@ -183,7 +193,7 @@
                             <li><strong>Procesador:</strong> Exynos 1480</li>
                             <li><strong>Cámara:</strong> Triple 50MP</li>
                             <li><strong>Batería:</strong> 5000mAh</li>
-                            <li><strong>Pantalla:</strong> 6.6" FHD+ Super AMOLED</li>
+                            <li><strong>Pantalla:</strong> 6.6" Super AMOLED</li>
                         </ul>
                     </div>
                 </div>
@@ -239,12 +249,11 @@
     </footer>
 
     <!-- BOTÓN WHATSAPP FLOTANTE -->
-    <a href="https://wa.me/570000000000" class="whatsapp-btn" target="_blank">
+    <a href="https://wa.me/message/BCL2QA4FMFRHP1" class="whatsapp-btn" target="_blank">
         <span>¿Dudas? Chat con nosotros</span>
         <div class="wp-icon"><i class="fa-brands fa-whatsapp"></i></div>
     </a>
 
     <script src="script.js"></script>
 </body>
-  </html>
-
+</html>
