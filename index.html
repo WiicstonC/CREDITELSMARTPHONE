@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creditel Smartphone - Catálogo Oficial</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <img src="assets/logo.png" alt="Creditel Smartphone" class="logo">
+            <nav class="nav-links">
+                <a href="#">Tienda</a>
+                <a href="#">Servicios</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#"><i class="fa-regular fa-user"></i> Mi Cuenta</a>
+            </nav>
+            <div class="nav-right">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar...">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- SECCIÓN SUPERIOR GRAPHS & CARDS -->
+        <section class="grid-top">
+            <!-- SECTOR HONOR -->
+            <div class="card-box honor-box">
+                <h2>HONOR</h2>
+                <div class="card-dual">
+                    <div class="product-mini">
+                        <img src="assets/honor-x7.jpg" alt="Honor X7D">
+                        <h3>HONOR X7D</h3>
+                        <ul>
+                            <li><strong>Procesador:</strong> 100W</li>
+                            <li><strong>Batería:</strong> 5100mAh</li>
+                            <li><strong>Pantalla:</strong> 6.6" FHD+</li>
+                        </ul>
+                        <button class="btn-detail" onclick="openModal('HONOR X7D')">Ver Detalles</button>
+                    </div>
+                    <div class="product-mini">
+                        <img src="assets/honor-magic8.jpg" alt="Honor Magic 8 Lite">
+                        <h3>HONOR MAGIC 8 LITE</h3>
+                        <ul>
+                            <li><strong>Procesador:</strong> 50MP</li>
+                            <li><strong>Cámara:</strong> 50MP</li>
+                            <li><strong>Pantalla:</strong> 6.6" FHD+</li>
+                        </ul>
+                        <button class="btn-detail" onclick="openModal('HONOR MAGIC 8 LITE')">Ver Detalles</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BANNER PROMO HONOR -->
+            <div class="card-box honor-promo">
+                <img src="assets/honor-promo.jpg" alt="Honor Innovación">
+                <div class="promo-overlay">
+                    <h2>HONOR:<br>INNOVACIÓN<br>AL ALCANCE</h2>
+                </div>
+            </div>
+
+            <!-- VARIEDAD TABLETS -->
+            <div class="card-box tablets-box">
+                <h2>VARIEDAD TABLETS</h2>
+                <div class="tablets-grid">
+                    <div class="tablet-item">
+                        <img src="assets/lenovo-tab.jpg" alt="Lenovo Tab Idea">
+                        <div class="item-info">
+                            <h4>Lenovo Tab Idea</h4>
+                            <p>(512GB/56B)</p>
+                            <small>Procesador 50MP | Batería 5000mAh | WiFi</small>
+                        </div>
+                    </div>
+                    <div class="tablet-item">
+                        <img src="assets/redmi-pad.jpg" alt="Redmi Pad 2">
+                        <div class="item-info">
+                            <h4>Redmi Pad 2</h4>
+                            <small>Procesador 1128 | Cámara 20MP | Batería 5000mAh | SIM Cabo</small>
+                        </div>
+                    </div>
+                    <div class="tablet-item">
+                        <img src="assets/samsung-a57.jpg" alt="Samsung A57">
+                        <div class="item-info">
+                            <h4>SAMSUNG A57</h4>
+                            <p>(256GB/5GB)</p>
+                            <small>Procesador A50 | Cámara 26MP | Batería 5000mAh | WiFi</small>
+                        </div>
+                    </div>
+                    <div class="tablet-item">
+                        <img src="assets/samsung-a17.jpg" alt="Samsung A17">
+                        <div class="item-info">
+                            <h4>SAMSUNG A17</h4>
+                            <p>(128GB/4GB)</p>
+                            <small>Procesador 36MP | Cámara 604 | Batería 5000mAh | Doble Sim</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- XIAOMI & ACCESORIOS SECTOR -->
+            <div class="card-box xiaomi-box">
+                <h2>XIAOMI</h2>
+                <div class="xiaomi-main">
+                    <img src="assets/xiaomi-note15.jpg" alt="Xiaomi Note 15 Pro Plus">
+                    <div class="xiaomi-details">
+                        <h3>XIAOMI NOTE 15 PRO PLUS</h3>
+                        <p>(512GB/72GB)</p>
+                        <ul>
+                            <li>Procesador: 850</li>
+                            <li>Cámara: 50MP</li>
+                            <li>Batería: 5000mAh</li>
+                            <li>Cámara Ultra: 50MP</li>
+                            <li>Pantalla: 6.6" Negro</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="xiaomi-sub-grid">
+                    <div class="sub-item">
+                        <img src="assets/xiaomi-band.jpg" alt="Xiaomi Smart Band">
+                        <span>XIAOMI SMART BAND 10</span>
+                    </div>
+                    <div class="sub-item">
+                        <img src="assets/redmi-watch.jpg" alt="Redmi Watch S Lite">
+                        <span>REDMI WATCH S LITE</span>
+                    </div>
+                    <div class="sub-item">
+                        <img src="assets/xiaomi-robot.jpg" alt="Xiaomi Robot Vacuum">
+                        <span>XIAOMI ROBOT VACUUM S40C</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ACCESORIOS Y SEGURIDAD SIDEBAR -->
+            <div class="card-side-column">
+                <div class="card-box side-card">
+                    <h2>ACCESORIOS XIAOMI</h2>
+                    <img src="assets/accesorios-kit.jpg" alt="Accesorio Xiaomi">
+                </div>
+                <div class="card-box side-card dark-bg">
+                    <h2>SEGURIDAD SAMSUNG KNOX</h2>
+                    <div class="knox-content">
+                        <img src="assets/samsung-knox.jpg" alt="Samsung Knox">
+                        <p>Seguridad Avanzada con protección constante en tu dispositivo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER INTERMEDIO DE ACCESORIOS -->
+        <section class="banner-horizontal">
+            <div class="banner-overlay-content">
+                <div class="text-group">
+                    <h3>DESCUBRE NUESTRA NUEVA LÍNEA DE ACCESORIOS</h3>
+                    <p>VISÍTANOS EN NUESTRO LOCAL</p>
+                </div>
+                <button class="btn-location"><i class="fa-solid fa-location-dot"></i> UBÍCANOS Y VISÍTANOS</button>
+                <button class="btn-shop">SHOP NOW</button>
+            </div>
+        </section>
+
+        <!-- FICHAS TÉCNICAS ( MÁS VENDIDOS ) -->
+        <section class="section-fichas">
+            <h2 class="title-fichas">FICHAS TÉCNICAS - CELULARES MÁS VENDIDOS EN COLOMBIA</h2>
+            <div class="fichas-grid">
+                
+                <div class="ficha-card">
+                    <img src="assets/samsung-a55.jpg" alt="Samsung Galaxy A55 5G">
+                    <div class="ficha-info">
+                        <h3>Samsung Galaxy A55 5G</h3>
+                        <ul>
+                            <li><strong>Procesador:</strong> Exynos 1480</li>
+                            <li><strong>Cámara:</strong> Triple 50MP</li>
+                            <li><strong>Batería:</strong> 5000mAh</li>
+                            <li><strong>Pantalla:</strong> 6.6" FHD+ Super AMOLED</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ficha-card">
+                    <img src="assets/redmi-note13.jpg" alt="Xiaomi Redmi Note 13 Pro">
+                    <div class="ficha-info">
+                        <h3>Xiaomi Redmi Note 13 Pro</h3>
+                        <ul>
+                            <li><strong>Procesador:</strong> Snapdragon 7s Gen 2</li>
+                            <li><strong>Cámara:</strong> 200MP</li>
+                            <li><strong>Batería:</strong> 5100mAh</li>
+                            <li><strong>Pantalla:</strong> 6.67" AMOLED</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ficha-card">
+                    <img src="assets/iphone14.jpg" alt="iPhone 14">
+                    <div class="ficha-info">
+                        <h3>iPhone 14</h3>
+                        <ul>
+                            <li><strong>Procesador:</strong> A15 Bionic</li>
+                            <li><strong>Cámara:</strong> Dual 12MP</li>
+                            <li><strong>Batería:</strong> ~3279mAh</li>
+                            <li><strong>Pantalla:</strong> 6.1" Super Retina XDR</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ficha-card">
+                    <img src="assets/moto-g54.jpg" alt="Motorola Moto G54 5G">
+                    <div class="ficha-info">
+                        <h3>Motorola Moto G54 5G</h3>
+                        <ul>
+                            <li><strong>Procesador:</strong> Dimensity 7020</li>
+                            <li><strong>Cámara:</strong> 50MP</li>
+                            <li><strong>Batería:</strong> 5000mAh</li>
+                            <li><strong>Pantalla:</strong> 6.5" FHD+</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <a href="#">Contacto</a>
+        <a href="#">Términos</a>
+        <a href="#">Envíos</a>
+    </footer>
+
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/570000000000" class="whatsapp-btn" target="_blank">
+        <span>¿Dudas? Chat con nosotros</span>
+        <div class="wp-icon"><i class="fa-brands fa-whatsapp"></i></div>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+  </html>
+
