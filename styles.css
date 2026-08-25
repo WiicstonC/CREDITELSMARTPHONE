@@ -1,5 +1,5 @@
 :root {
-    --card-bg: rgba(255, 255, 255, 0.45);
+    --card-bg: rgba(255, 255, 255, 0.5);
     --card-border: rgba(255, 255, 255, 0.7);
     --primary-blue: #0072ff;
     --dark-blue: #0b2545;
@@ -21,42 +21,41 @@ body {
     min-height: 100vh;
 }
 
-/* POPUP MODAL PROMOCIÓN */
+/* POPUP MODAL PROMOCIÓN LIMPIO */
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
     backdrop-filter: blur(5px);
-    animation: fadeIn 0.3s ease;
 }
 
 .modal-content {
-    background: #111;
+    background: #000;
     border-radius: 12px;
-    max-width: 420px;
+    max-width: 380px;
     width: 90%;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    border: 1px solid rgba(255,255,255,0.1);
     text-align: center;
 }
 
 .modal-close {
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: 12px;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
-    font-size: 24px;
+    font-size: 22px;
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -69,27 +68,27 @@ body {
 
 .modal-body img {
     width: 100%;
-    max-height: 380px;
-    object-fit: contain;
-    background: #000;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .modal-text {
     padding: 15px;
-    background: #1a1a1a;
+    background: #111;
     color: white;
 }
 
 .modal-text h3 {
     color: #00c6ff;
-    font-size: 16px;
-    margin-bottom: 5px;
+    font-size: 15px;
+    margin-bottom: 4px;
 }
 
 .modal-text p {
-    font-size: 12px;
-    color: #ccc;
-    margin-bottom: 12px;
+    font-size: 11px;
+    color: #bbb;
+    margin-bottom: 10px;
 }
 
 .btn-modal-wa {
@@ -100,17 +99,12 @@ body {
     padding: 8px 16px;
     border-radius: 20px;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 12px;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-/* NAVBAR */
+/* NAVBAR LIMPIA */
 .navbar {
-    background: rgba(194, 218, 240, 0.9);
+    background: rgba(194, 218, 240, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     position: sticky;
@@ -132,21 +126,10 @@ body {
 .logo {
     height: 45px;
     object-fit: contain;
+    background: transparent;
 }
 
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #112233;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.nav-right {
+.nav-right-clean {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -159,6 +142,7 @@ body {
     padding: 5px 15px;
     display: flex;
     align-items: center;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .search-box input {
@@ -166,19 +150,70 @@ body {
     outline: none;
     background: transparent;
     padding: 3px;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .social-icons a {
-    color: #112233;
-    margin-left: 8px;
+    color: #0b2545;
+    background: rgba(255,255,255,0.6);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 6px;
     font-size: 16px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.social-icons a:hover {
+    background: var(--primary-blue);
+    color: white;
+}
+
+/* BARRA DE FILTROS POR MARCA */
+.filter-bar-container {
+    max-width: 1400px;
+    margin: 15px auto 0 auto;
+    padding: 0 15px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+    scrollbar-width: none;
+}
+
+.filter-buttons::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-btn {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: var(--dark-blue);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.2s;
+    font-size: 13px;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: var(--primary-blue);
+    color: white;
 }
 
 /* MAIN CONTENT LAYOUT */
 .main-content {
     max-width: 1400px;
-    margin: 20px auto;
+    margin: 15px auto;
     padding: 0 15px;
 }
 
@@ -198,7 +233,7 @@ body {
 }
 
 .card-box h2 {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
     color: var(--dark-blue);
     margin-bottom: 12px;
@@ -222,18 +257,18 @@ body {
 
 .product-mini img {
     width: 100%;
-    height: 100px;
+    height: 90px;
     object-fit: contain;
 }
 
 .product-mini h3 {
-    font-size: 12px;
+    font-size: 11px;
     margin: 5px 0;
 }
 
 .product-mini ul {
     list-style: none;
-    font-size: 10px;
+    font-size: 9px;
     text-align: left;
     margin-bottom: 8px;
 }
@@ -267,79 +302,80 @@ body {
     left: 10px;
     color: white;
     text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    font-size: 11px;
 }
 
 /* TABLETS GRID */
 .tablets-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 8px;
 }
 
 .tablet-item {
     display: flex;
-    gap: 8px;
+    gap: 6px;
     background: rgba(255, 255, 255, 0.5);
-    padding: 8px;
+    padding: 6px;
     border-radius: 8px;
     align-items: center;
 }
 
 .tablet-item img {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
 .item-info h4 {
-    font-size: 10px;
+    font-size: 9px;
 }
 
 .item-info small {
-    font-size: 8px;
+    font-size: 7px;
     display: block;
 }
 
 /* XIAOMI SECTION */
 .xiaomi-main {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     background: rgba(255, 255, 255, 0.5);
-    padding: 10px;
+    padding: 8px;
     border-radius: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     align-items: center;
 }
 
 .xiaomi-main img {
-    width: 65px;
+    width: 55px;
     object-fit: contain;
 }
 
 .xiaomi-details h3 {
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .xiaomi-details ul {
-    font-size: 9px;
+    font-size: 8px;
     list-style: none;
 }
 
 .xiaomi-sub-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
+    gap: 4px;
     text-align: center;
 }
 
 .sub-item img {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     object-fit: contain;
 }
 
 .sub-item span {
-    font-size: 8px;
+    font-size: 7px;
     display: block;
     font-weight: bold;
 }
@@ -388,8 +424,8 @@ body {
 
 .title-fichas {
     text-align: center;
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    margin-bottom: 15px;
     color: #0b2545;
 }
 
@@ -402,27 +438,28 @@ body {
 .ficha-card {
     background: rgba(255, 255, 255, 0.6);
     border-radius: 12px;
-    padding: 15px;
+    padding: 12px;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
     box-shadow: var(--shadow);
 }
 
 .ficha-card img {
-    width: 75px;
-    height: 95px;
+    width: 70px;
+    height: 90px;
     object-fit: contain;
 }
 
 .ficha-info h3 {
-    font-size: 13px;
-    margin-bottom: 5px;
+    font-size: 12px;
+    margin-bottom: 4px;
 }
 
 .ficha-info ul {
     list-style: none;
-    font-size: 10px;
+    font-size: 9px;
+    margin-bottom: 6px;
 }
 
 /* FOOTER */
@@ -431,13 +468,14 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
 }
 
 .footer a {
     color: #0b2545;
     text-decoration: none;
     font-weight: bold;
+    font-size: 13px;
 }
 
 /* WHATSAPP FLOAT */
@@ -474,7 +512,4 @@ body {
     .grid-top {
         grid-template-columns: 1fr;
     }
-    .nav-container {
-        flex-direction: column;
     }
-}
